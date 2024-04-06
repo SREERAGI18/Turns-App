@@ -13,7 +13,5 @@ project structure
 
 - di
 - network
-- room
 - screens
 - utils
-- worker
