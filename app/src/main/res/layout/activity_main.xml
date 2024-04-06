@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".screens.MainActivity">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/navHost"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/app_nav_graph"
+            tools:layout="@layout/fragment_movie_list"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/top_corner_rad_16"
+            app:labelVisibilityMode="labeled"
+            app:elevation="20dp"
+            app:itemRippleColor="@null"
+            style="@style/Widget.MaterialComponents.BottomNavigationView.PrimarySurface"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:itemTextAppearanceActive="@style/BottomNavigationView.Active"
+            app:itemTextAppearanceInactive="@style/BottomNavigationView"
+            app:itemIconTint="@drawable/bottom_navigation_selector"
+            app:itemTextColor="@drawable/bottom_navigation_selector"
+            app:menu="@menu/bottom_nav" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
